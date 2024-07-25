@@ -8,9 +8,11 @@ import Header from './Header';
 
 const cx = classNames.bind(styles);
 function Menu({ children, items = [] }) {
-    const [history, setHistory] = useState([{}]);
+    console.log(items);
+    const [history, setHistory] = useState([{ data: items }]);
+    const current = history[history.length - 1];
     const renderItems = () => {
-        return items.map((item, index) => <MenuItem key={index} data={item} />);
+        return current.data.map((item, index) => <MenuItem key={index} data={item} />);
     };
     return (
         <Tippy
