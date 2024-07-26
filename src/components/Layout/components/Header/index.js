@@ -29,10 +29,12 @@ const MENU_ITEMS = [
             title: 'Language',
             data: [
                 {
+                    type: 'language',
                     code: 'en',
                     title: 'English',
                 },
                 {
+                    type: 'language',
                     code: 'vi',
                     title: 'Tiếng Việt',
                 },
@@ -59,6 +61,15 @@ function Header() {
             setSearchResult([]);
         }, 0);
     }, []);
+
+    const handeOnchangeMenu = (menuItem) => {
+        switch (menuItem.type) {
+            case 'language':
+                // handle change language
+                break;
+            default:
+        }
+    };
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -98,7 +109,7 @@ function Header() {
                     <Button text>Upload</Button>
                     <Button primary>Log in</Button>
 
-                    <Menu items={MENU_ITEMS}>
+                    <Menu items={MENU_ITEMS} onChange={handeOnchangeMenu}>
                         <button className={cx('more-btn')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} />
                         </button>
