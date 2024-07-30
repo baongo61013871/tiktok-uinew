@@ -3,20 +3,25 @@
     --search-height: 46px;
     --top-spacer: 9px;
     --search-btn-width: 52px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: var(--default-layout-header-height);
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
-    display: flex;
-    justify-content: center;
+    background-color: var(--white);
 }
 
 .inner {
-    height: 100%;
-    width: var(--default-layout-width);
-    padding: 0 var(--default-layout-horizontal-spacer);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
+    padding: 0 var(--default-layout-horizontal-spacer);
+    width: var(--default-layout-width);
 }
 
 // Actions

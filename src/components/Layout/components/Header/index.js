@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Tippy from '@tippyjs/react';
@@ -19,6 +20,7 @@ import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import Image from '~/components/Image';
 import Search from '../Search';
+import routesConfig from '~/config/routes';
 
 const cx = classNames.bind(styles);
 
@@ -34,6 +36,7 @@ const MENU_ITEMS = [
                     code: 'en',
                     title: 'English',
                 },
+
                 {
                     type: 'language',
                     code: 'vi',
@@ -94,7 +97,10 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <img src={images.logo} alt="TikTok" />
+                    <Link to={routesConfig.home}>
+                        {' '}
+                        <img src={images.logo} alt="TikTok" />
+                    </Link>
                 </div>
                 <Search />
 
