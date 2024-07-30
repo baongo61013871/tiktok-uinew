@@ -33,6 +33,15 @@
     }
 }
 
+.squared {
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 1px;
+    padding: 7px 16px;
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.12);
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
 .primary {
     background-color: var(--primary);
     color: var(--white);
@@ -80,7 +89,9 @@
 }
 
 .icon {
-    display: inline-block;
+    display: inline-flex;
     width: 24px;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
