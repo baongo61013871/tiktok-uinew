@@ -28,7 +28,7 @@ const cx = classNames.bind(styles);
 const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faEarthAsia} />,
-        title: 'English',
+        title: 'Language',
         children: {
             title: 'Language',
             data: [
@@ -42,6 +42,24 @@ const MENU_ITEMS = [
                     type: 'language',
                     code: 'vi',
                     title: 'Tiếng Việt',
+                },
+
+                {
+                    type: 'language',
+                    code: 'kr',
+                    title: '한국인',
+                },
+
+                {
+                    type: 'language',
+                    code: 'cn',
+                    title: '中国人',
+                },
+
+                {
+                    type: 'language',
+                    code: 'es',
+                    title: 'Español',
                 },
             ],
         },
